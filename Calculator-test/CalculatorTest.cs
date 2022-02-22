@@ -20,37 +20,112 @@ namespace Calculator_test
 
 
         [TestMethod]
-        [DataRow("5 1", 4)]
-        [DataRow("15 5", 10)]
-        [DataRow("30 22", 12)]
-        [DataRow("10 2", 8)]
-        public void Input_Sub(string input, int expected)
+        public void Subtraction1()
         {
-            Assert.AreEqual(expected, Library.Sub(input));
+            double number1 = 5;
+            double number2 = 1;
+            double result = Library.Sub(number1, number2);
+            Assert.AreEqual(4, result);
+        }
+        [TestMethod()]
+        public void Subtraction2()
+        {
+            double number1 = 15;
+            double number2 = 5;
+            double result = Library.Sub(number1, number2);
+            Assert.AreEqual(10, result);
+        }
+
+        [TestMethod()]
+        public void Subtraction3()
+        {
+            double number1 = 30;
+            double number2 = 2;
+            double result = Library.Sub(number1, number2);
+            Assert.AreEqual(28, result);
+        }
+        [TestMethod()]
+        public void Subtraction4()
+        {
+            double number1 = 10;
+            double number2 = 11;
+            double result = Library.Sub(number1, number2);
+            Assert.AreEqual(-1, result);
+        }
+
+        [TestMethod()]
+        public void Multiplication1()
+        {
+            double number1 = 5;
+            double number2 = 1;
+            double result = Library.Multi(number1, number2);
+            Assert.AreEqual(5, result);
+        }
+
+        [TestMethod()]
+        public void Multiplication2()
+        {
+            double number1 = 5;
+            double number2 = 5;
+            double result = Library.Multi(number1, number2);
+            Assert.AreEqual(25, result);
+        }
+
+        [TestMethod()]
+        public void Multiplication3()
+        {
+            double number1 = 3;
+            double number2 = 2;
+            double result = Library.Multi(number1, number2);
+            Assert.AreEqual(6, result);
+        }
+        [TestMethod()]
+        public void Multiplication4()
+        {
+            double number1 = 6;
+            double number2 = 4;
+            double result = Library.Multi(number1, number2);
+            Assert.AreEqual(24, result);
+        }
+        [TestMethod()]
+        public void Division1()
+        {
+            double number1 = 10;
+            double number2 = 2;
+            double result = Library.Division(number1, number2);
+            Assert.AreEqual(5, result);
+        }
+
+        [TestMethod()]
+        public void DivisionTest2()
+        {
+            double number1 = 30;
+            double number2 = 6;
+            double result = Library.Division(number1, number2);
+            Assert.AreEqual(5, result);
+        }
+
+        [TestMethod()]
+        public void Division3()
+        {
+            double number1 = 10;
+            double number2 = 10;
+            double result = Library.Division(number1, number2);
+            Assert.AreEqual(1, result);
+        }
+        [TestMethod()]
+        public void Division4()
+        {
+            double number1 = 100;
+            double number2 = 10;
+            double result = Library.Division(number1, number2);
+            Assert.AreEqual(10, result);
         }
 
 
-        [TestMethod]
-        [DataRow("5 1", 5)]
-        [DataRow("5 5", 25)]
-        [DataRow("3 2", 6)]
-        [DataRow("10 2", 20)]
-        public void Input_Multi(string input, int expected)
-        {
-            Assert.AreEqual(expected, Library.Sub(input));
-        }
 
 
-        [TestMethod]
-        [DataRow("5 1", 5)]
-        [DataRow("15 5", 3)]
-        [DataRow("30 6", 5)]
-        [DataRow("10 2", 5)]
-        public void Input_Div(string input, int expected)
-        {
-            Assert.AreEqual(expected, Library.Sub(input));
-        }
-
+       
 
     }
 

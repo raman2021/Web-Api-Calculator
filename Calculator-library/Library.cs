@@ -34,97 +34,27 @@ namespace Calculator_library
 
 
         }
-        public static int Sub(String series)
+
+        public static double Sub(double number1, double number2)
         {
-            int result = 0;
-
-            String[] numbers = series.Split(' ');
-
-
-            foreach (string number in numbers)
-            {
-
-                int temp;
-
-
-                if (int.TryParse(number, out temp))
-                {
-
-                    result -= temp;
-                }
-                else
-                {
-                    throw new ArgumentException();
-                }
-
-            }
-
-
-            return result;
+            return number1 - number2;
         }
-            public static int Multi(String series)
+        public static double Multi(double number1, double number2)
+        {
+            return number1 * number2;
+        }
+        public static double Division(double number1, double number2)
+        {
+            if (number2 != 0)
             {
-                int result = 0;
-
-                String[] numbers = series.Split(' ');
-
-
-                foreach (string number in numbers)
-                {
-
-                    int temp;
-
-
-                    if (int.TryParse(number, out temp))
-                    {
-
-                        result *= temp;
-                    }
-                    else
-                    {
-                        throw new ArgumentException();
-                    }
-
-                }
-
-
-                return result;
-
-
+                return number1 / number2;
             }
-
-            public static int Div(String series)
+            else
             {
-                int result = 0;
-
-                String[] numbers = series.Split(' ');
-
-
-                foreach (string number in numbers)
-                {
-
-                    int temp;
-
-
-                    if (int.TryParse(number, out temp))
-                    {
-
-                        result /= temp;
-                    }
-                    else
-                    {
-                        throw new ArgumentException();
-                    }
-
-                }
-
-
-                return result;
-
-
-
+                return number1;
             }
         }
+    }
     }
 
 
