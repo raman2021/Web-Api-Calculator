@@ -30,6 +30,28 @@ namespace Calculator_test
         }
 
 
+        [TestMethod]
+        [DataRow("5 1", 5)]
+        [DataRow("5 5", 25)]
+        [DataRow("3 2", 6)]
+        [DataRow("10 2", 20)]
+        public void Input_Multi(string input, int expected)
+        {
+            Assert.AreEqual(expected, Library.Sub(input));
+        }
+
+
+        [TestMethod]
+        [DataRow("5 1", 5)]
+        [DataRow("15 5", 3)]
+        [DataRow("30 6", 5)]
+        [DataRow("10 2", 5)]
+        public void Input_Div(string input, int expected)
+        {
+            Assert.AreEqual(expected, Library.Sub(input));
+        }
+
+
     }
 
 }
