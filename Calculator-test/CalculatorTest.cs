@@ -13,7 +13,7 @@ namespace Calculator_test
         [DataRow("10 20", 30)]
         [DataRow("30 22", 52)]
         [DataRow("1 20", 21)]
-        public void Input_Add(string input, int expected)
+        public void Addition(string input, int expected)
         {
             Assert.AreEqual(expected, Library.Sum(input));
         }
@@ -97,7 +97,7 @@ namespace Calculator_test
         }
 
         [TestMethod()]
-        public void DivisionTest2()
+        public void Division2()
         {
             double number1 = 30;
             double number2 = 6;
