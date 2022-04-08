@@ -121,11 +121,19 @@ namespace Calculator_test
             double result = Library.Division(number1, number2);
             Assert.AreEqual(10, result);
         }
+        [TestMethod()]
+        public void Percentage1()
+        {
+            double number1 = 400;
+            double number2 = 320;
+            double result = Library.Percentages(number1, number2);
+            Assert.AreEqual(80, result);
+        }
 
 
 
 
-       
+
 
     }
 

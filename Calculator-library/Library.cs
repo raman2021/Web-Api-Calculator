@@ -54,6 +54,11 @@ namespace Calculator_library
                 return number1;
             }
         }
+        public static double Percentages (double number1, double number2)
+        {
+             return number1 % number2;
+           // return (number1 * number2) / 100;
+        }
     }
     }
 

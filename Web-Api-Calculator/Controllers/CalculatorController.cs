@@ -48,7 +48,16 @@ namespace Web_Api_Calculator.Controllers
                 
 
             }
+        
 
+
+        }
+        [HttpGet]
+
+        public double Percentage(int lValue, int rValue)
+        {
+             return lValue % rValue;
+           // return (number1 * number2) / 100;
         }
     }
 }
